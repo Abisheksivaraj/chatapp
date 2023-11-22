@@ -3,46 +3,74 @@ import './register.css'
 
 import image1 from "./images/img1.webp"
 
+import image2 from "./images/add.png"
+
 
 
 const register = () => {
   return (
     <div className="registration">
       <div className="form-details">
-        <img
-          src={image1}
-          alt=""
-          className="profile-logo"
-        />
+        <img src={image1} alt="" className="profile-logo" />
         <div className="logo">Chat Hub...!</div>
         <br />
         <div className="title">Register Here </div>
         <br />
         <form action="#">
-          <label htmlFor="name">Your name</label>
-          <input type="text" placeholder="Enter your name" />
+          <div className="input-field">
+            {" "}
+            <label htmlFor="name">Your name</label>
+            <input
+              type="text"
+              className="inp-style"
+              placeholder="Enter your name"
+            />
+          </div>
 
-          <label htmlFor="dob">date-Of-Birth</label>
-          <input type="date" placeholder="Enter your DOB" />
+          {/* <div className="input-field">
+            <label htmlFor="gender">Gender</label>
+            <span>
+              <input type="radio" name="name1" value="value1" />
+              <input type="radio" name="name2" value="value2" />
+            </span>
+          </div> */}
+          <br />
 
-          <label htmlFor="gender">Gender</label>
-          <span>
-            <input type="radio" name="name1" value="value1" />
-            <input type="radio" name="name2" value="value2" />
-          </span>
-
-          <label htmlFor="mail">E-mail</label>
-          <input type="email" placeholder="Enter your mail" />
-
-          <label htmlFor="password">Password</label>
-          <input type="password" placeholder="Enter your password" />
-          <label htmlFor="file"></label>
-          <input type="file" />
-          <button>Sign up</button>
+          <div className="input-field">
+            <label htmlFor="mail">E-mail</label>
+            <input
+              type="email"
+              className="inp-style"
+              placeholder="Enter your mail"
+            />
+          </div>
+          <br />
+          <div className="input-field">
+            <label htmlFor="password">Password</label>
+            <input
+              type="password"
+              className="inp-style"
+              placeholder="Enter your password"
+            />
+          </div>
+          <br />
+          <div className="input-field">
+            <input style={{ display: "none" }} id="file" type="file" />
+            <label htmlFor="file">
+              <img src={image2}
+              alt=""  className="add"/>
+              <span>add an image</span>
+            </label>
+          </div>
+          <br />
+          <button className="sign">Sign up</button>
         </form>
         <p>
           <h3>
-            Already registered...? <span className="log">Login</span>{" "}
+            Already registered...?{" "}
+            <span className="log">
+              <a href="">Login</a>
+            </span>
           </h3>
         </p>
       </div>
