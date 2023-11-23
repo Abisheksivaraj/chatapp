@@ -118,10 +118,20 @@ background: rgb(250, 204, 243);
 
   .sidebar{flex: 1;
   background: rgb(48, 17, 96);
-   
 border-top-right-radius: 1rem;
 border-bottom-right-radius: 1rem;
 }
   .chat{flex: 2;}
+
+}
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid white;
+}
+.logo-nav {
+  
+  font-size: 1rem;
 }
 
