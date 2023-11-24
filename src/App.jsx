@@ -1,13 +1,17 @@
 import Register from "./pages/Register";
 
-import Login from "./pages/Login"
+import Login from "./pages/Login";
+
+import Sidebar from "./components/Sidebar";
 
 import Home from "./pages/Home";
 
 function App() {
   return (
     <>
-      <Home />
+      {/* <Register/>
+      <Login/> */}
+      <Home/>
     </>
   );
 }

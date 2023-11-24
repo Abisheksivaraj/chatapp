@@ -1,13 +1,20 @@
 import React from 'react'
 
 import Navbar from "./Navbar"
+import Search from "./Searchbar"
 
-const sidebar = () => {
+import "../styles/Sidebar.css";
+import "../styles/Search.css";
+
+
+const Sidebar = () => {
   return (
+    
     <div className='sidebar'>
       <Navbar/>
+      <Search/>
     </div>
   )
 }
 
-export default sidebar
+export default Sidebar

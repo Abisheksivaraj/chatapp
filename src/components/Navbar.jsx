@@ -1,5 +1,9 @@
 import React from 'react'
+import '../styles/Navbar.css'
 
+import logout from "../images/logout.png"
+
+import user from "../images/1.jpg"
 
 const Navbar = () => {
   return (
@@ -7,16 +11,13 @@ const Navbar = () => {
       <div className="logo-nav">Chat Hub...!</div>
 
       <div className="client-img">
-        <img src="" alt="" />
+        <img src={user} 
+        alt="" className='client'/>
       </div>
       <span>Abishek</span>
-      <button className="logout">
-        logout
-        <img
-          src="https://t4.ftcdn.net/jpg/00/77/21/45/360_F_77214592_nwi23yr4rsRsuA0yy6FspW7AiRFTq5NU.jpg"
-          alt=""
-        />
-      </button>
+      <a style={{cursor:'pointer'}} className="logout">
+        <img src={logout} alt="" className='out' />
+      </a>
     </div>
   );
 }
