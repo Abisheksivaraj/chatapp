@@ -11,12 +11,6 @@ const Messagebox = () => {
       <Message />
       <Message />
       <Message />
-      <Message />
-      <Message />
-      <Message />
-      <Message />
-      <Message />
-      <Message />
     </div>
   );
 }
