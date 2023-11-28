@@ -7,16 +7,23 @@ const Searchbar = () => {
   return (
     <>
       <div className="search">
-        <div className="search-form">
-          <input type="text" placeholder="Search.." className="searchbox" />
-        </div>
+        <div class="box">
+    <div class="search-box">
+      <input type="text" placeholder="search" className="search-bar" />
+      <label for="check" class="icon">
+        <FaSearch/>
+      </label>
+    </div>
 
-        <div className="user-chat">
+    <div className="user-chat">
           <img src={user} alt="" className="client" />
           <div className="user-info">
             <span>Abishek</span>
           </div>
         </div>
+  </div>
+
+        
       </div>
     </>
   );

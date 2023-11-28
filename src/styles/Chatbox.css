@@ -1,6 +1,12 @@
+
+/* .side-chats{
+  overflow: scroll;
+  height: 80vh;
+} */
+
 .chat-name{
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 100;
 }
 
 .cht{
@@ -10,4 +16,12 @@
 
 .client{
   margin-top: 6px;
+}
+
+
+
+.call{
+  position:relative;
+  right: 0;
+  bottom:0 ;
 }

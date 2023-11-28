@@ -1,11 +1,9 @@
   .chat {
     flex: 2;
-    height: 50px;
-    background-color: aliceblue;
-    /* display: flex;
-    align-items: center;
-    justify-content: space-between; */
-    
+    height: 74px;
+    background-color: white;
+    position: relative;
+    border-bottom: 11px solid rgb(241, 238, 238);
   }
 
   .info{
@@ -13,14 +11,44 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    color: lightcoral;
+    color:rgb(81, 81, 114);
   }
+
+  .name{
+    color: rgb(71, 71, 71);
+    font-size: 16px;
+  }
+
+.chat-name{
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+    .image {
+      height: 2.5rem;
+      width: 2.5rem;
+      border-radius: 2rem;
+    }
 
   .icons{
     display: flex;
     gap: 14px;
   padding: 1px;
-  font-size: 2rem;
+  font-size: 1rem;
   }
 
+  .video:hover{
+    color: navy;
+    cursor: pointer;
+  }
+
+    .call:hover {
+      color: navy;
+      cursor: pointer;
+    }
+
+        .more:hover {
+          color: navy;
+          cursor: pointer;
+        }
 

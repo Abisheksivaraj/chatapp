@@ -1,23 +1,29 @@
 
 .navbar {
-  background-color: aliceblue;
+  background-color: white;
+  height: 64px;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  border-bottom: 1px solid white;
+  gap: 12rem;
 }
 
 .logo-nav {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+
+
+.log-out{
+  font-size: 1.5rem;
+}
+
+a{
+  color:#952bff;
+
+}
+.log{
+  margin-left: -1rem;
   font-size: 1rem;
 }
 
-.client{
-  height: 3rem;
-  width: 3rem;
-  border-radius: 2rem;
-}
 
-.out{
-  width: 3rem;
-  height: 3rem;
-}

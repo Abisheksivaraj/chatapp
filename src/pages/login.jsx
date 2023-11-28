@@ -1,6 +1,6 @@
-import React from 'react'
-import image1 from "../images/profile.webp"
-import '../styles/Login.css';
+import React from "react";
+// import image1 from "../images/profile.webp"
+import "../styles/Login.css";
 const Login = () => {
   return (
     <div className="registration">
@@ -48,14 +48,11 @@ const Login = () => {
       </div>
     </div>
   );
-}
+};
 
-export default Login
-
-
+export default Login;
 
 // background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
-
 
 // background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
 

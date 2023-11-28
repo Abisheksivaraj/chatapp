@@ -1,23 +1,20 @@
 import React from 'react'
 import '../styles/Navbar.css'
 
-import logout from "../images/logout.png"
+import { FaSignOutAlt } from "react-icons/fa";
 
-import user from "../images/1.jpg"
+
 
 const Navbar = () => {
   return (
     <div className="navbar">
-      <div className="logo-nav">Chat Hub...!</div>
+      <div className="logo-nav">Chats</div>
 
-      <div className="client-img">
-        <img src={user} 
-        alt="" className='client'/>
+      <div className="log-out">
+        <a href="">
+          <FaSignOutAlt />
+        </a>
       </div>
-      <span>Abishek</span>
-      <a style={{cursor:'pointer'}} className="logout">
-        <img src={logout} alt="" className='out' />
-      </a>
     </div>
   );
 }

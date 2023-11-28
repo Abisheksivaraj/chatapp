@@ -7,16 +7,19 @@ import Search from "../components/Searchbar";
 
 import "../styles/Home.css";
 
-const home = () => {
+const Home = () => {
   return (
     <div className="home">
+      <div className="green"></div>
+      <div className="blue"></div>
       <div className="container">
         <Sidebar />
         <Chats />
-        {/* <Search/> */}
+        {/* <Message/> */}
+        {/* <Search /> */}
       </div>
     </div>
   );
 };
 
-export default home;
+export default Home;

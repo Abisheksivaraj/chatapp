@@ -1,33 +1,44 @@
-import React from 'react'
+import React from "react";
+import "../styles/Chats.css";
+import Message from "./Messages"
+import Input from "./Input";
 
-import { IoVideocamOutline } from "react-icons/io5";
-import { IoCallOutline } from "react-icons/io5";
+
+import { IoVideocam } from "react-icons/io5";
+import { FaPhoneAlt } from "react-icons/fa";
 import { IoMdMore } from "react-icons/io";
 
-import "../styles/Chats.css";
-import Message from './Messagebox';
+
+
+
 
 const Chats = () => {
   return (
     <div className="chat">
       <div className="info">
-        <span className="chat-name">Abishek</span>
+        <div className="chat-name">
+          <div className="img-name">
+            <img src="src/images/1.jpg" className="image" alt="" />
+          </div>
+          <span className="name">Abishek</span>
+        </div>
         <div className="icons">
           <div className="video">
-            <IoVideocamOutline />
+            <IoVideocam />
           </div>
 
           <div className="call">
-            <IoCallOutline />
+            <FaPhoneAlt />
           </div>
           <div className="more">
             <IoMdMore />
           </div>
         </div>
-        <Message/>
       </div>
+      <Message />
+      <Input />
     </div>
   );
-}
+};
 
-export default Chats
+export default Chats;

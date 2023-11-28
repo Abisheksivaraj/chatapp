@@ -1,0 +1,52 @@
+.input{
+
+  border-top: 1px solid gainsboro;
+  height: 65px;
+  margin-top: -1rem;
+
+background-color: #fff;
+padding: 10px;
+
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+}
+
+.msg{
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.text-box{
+  width: 40vw;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  
+}
+
+
+
+.send{
+  display: flex;
+  align-items: center;
+gap: 1rem;
+cursor: pointer;
+}
+
+.ment{
+  height: 2rem;
+  width: 2rem;
+  align-items: center;
+  border-radius: 15px;
+  color: white;
+  background-color:#952bff;
+  cursor: pointer;
+}
+
+.snd {
+  color: #952bff;
+}

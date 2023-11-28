@@ -35,8 +35,9 @@ const Chatbox = () => {
           <p className="cht">hello</p>
         </div>
       </div>
-    </div>
+</div>
+
   );
 }
 
-export default Chatbox
+export default Chatbox;
