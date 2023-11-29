@@ -1,9 +1,7 @@
 .registration {
   width: 100vw;
   height: 100vh;
-
-
-  background-image: url(../images/loginbg.avif); 
+  background-color:rgb(214, 214, 246);
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
@@ -97,3 +95,13 @@ a {
   width: 2rem;
   height: 2rem;
 }
+
+
+
+
+
+
+
+
+
+Login. Chat. Connect

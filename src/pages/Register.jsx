@@ -1,36 +1,58 @@
 import React from "react";
-import '../styles/Register.css'
-
-
-
-import image2 from "../images/addavatar.png"
-
-import {createUserWithEmailAndPassword } from "firebase/auth";
-import{auth} from "../firebase"
+import { useState } from "react";
+import "../styles/Register.css";
+import image2 from "../images/addavatar.png";
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { auth, storage } from "../firebase";
+import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
+import { doc, setDoc } from "firebase/firestore";
+import { useNavigate, Link } from "react-router-dom";
 
 const register = () => {
+  const [err, setErr] = useState(false);
+  const navigate = useNavigate();
 
-
-  const handleSubmit = async (e)=>{
-    e.preventDefault()
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     const yourName = e.target[0].value;
     const email = e.target[1].value;
     const password = e.target[2].value;
     const file = e.target[3].value[0];
 
+    try {
+      const res = await createUserWithEmailAndPassword(auth, email, password);
 
-  try{
-  const res = await createUserWithEmailAndPassword(auth, email, password);
-  }catch(err){
+      const storageRef = ref(storage, yourName);
 
+      const uploadTask = uploadBytesResumable(storageRef, file);
+      uploadTask.on(
+        (error) => {
+          setErr(true);
+        },
+        () => {
+          getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {
+            await updateProfile(res.user, {
+              yourName,
+              photoURL: downloadURL,
+            });
+            await setDoc(doc(db, "users", res.user.uid), {
+              uid: res.user.uid,
+              yourName,
+              email,
+              photoURL: downloadURL,
+            });
 
-  }
-
-  }
+            await setDoc(doc(db, "userChats", res.user.uid), {}), navigate("/");
+          });
+        }
+      );
+    } catch (err) {
+      setErr(true);
+    }
+  };
   return (
     <div className="registration">
       <div className="form-details">
-        
         <div className="logo">Chat Hub...!</div>
         <br />
         <div className="title">Register Here </div>
@@ -74,18 +96,22 @@ const register = () => {
           </div>
 
           <button className="sign">Sign up</button>
+          {err && <span>Something went wrong</span>}
         </form>
         <p>
           <h3>
             Already registered...?{" "}
             <span className="log">
-              <a href="">Login</a>
+              <a href="">
+                {" "}
+                <Link to="/login">Login</Link>
+              </a>
             </span>
           </h3>
         </p>
       </div>
     </div>
   );
-}
+};
 
 export default register;
