@@ -1,26 +1,41 @@
 import React from "react";
 import '../styles/Register.css'
 
-import image1 from "../images/profile.webp"
+
 
 import image2 from "../images/addavatar.png"
 
-
+import {createUserWithEmailAndPassword } from "firebase/auth";
+import{auth} from "../firebase"
 
 const register = () => {
+
+
+  const handleSubmit = async (e)=>{
+    e.preventDefault()
+    const yourName = e.target[0].value;
+    const email = e.target[1].value;
+    const password = e.target[2].value;
+    const file = e.target[3].value[0];
+
+
+  try{
+  const res = await createUserWithEmailAndPassword(auth, email, password);
+  }catch(err){
+
+
+  }
+
+  }
   return (
     <div className="registration">
       <div className="form-details">
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShQB26LlkocXak8CUJDtmMeNHZ5irKtYw8xXJDTy-NoO4HRfXhbWpqa0zz00qfZ2ejpKk&usqp=CAU"
-          alt=""
-          className="profile-logo"
-        />
+        
         <div className="logo">Chat Hub...!</div>
         <br />
         <div className="title">Register Here </div>
         <br />
-        <form action="#">
+        <form onSubmit={handleSubmit}>
           <div className="input-field">
             {" "}
             <label htmlFor="name">Your name</label>
@@ -73,4 +88,4 @@ const register = () => {
   );
 }
 
-export default register
+export default register;
