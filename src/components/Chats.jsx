@@ -20,7 +20,7 @@ const Chats = () => {
           <div className="img-name">
             <img src="src/images/1.jpg" className="image" alt="" />
           </div>
-          <span className="name">Abishek</span>
+          <span className="name">Bala</span>
         </div>
         <div className="icons">
           <div className="video">

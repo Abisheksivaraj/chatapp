@@ -1,8 +1,8 @@
-import React from 'react'
+import React from "react";
 import { IoSendSharp } from "react-icons/io5";
 import { BsEmojiSmile } from "react-icons/bs";
 import { MdOutlineAttachFile } from "react-icons/md";
-import '../styles/Input.css'
+import "../styles/Input.css";
 
 const Input = () => {
   return (
@@ -10,7 +10,7 @@ const Input = () => {
       <div className="msg">
         <span className="attach">
           <input type="file" style={{ display: "none" }} id="file" />
-          <label htmlFor="file" className='ment'>
+          <label htmlFor="file" className="ment">
             <MdOutlineAttachFile />
           </label>
         </span>
@@ -27,19 +27,20 @@ const Input = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Input;
 
-
-
-{/* <span className="emoji">
+{
+  /* <span className="emoji">
           <BsEmojiSmile />
-        </span> */}
+        </span> */
+}
 
-          {/* <span className="add-image">
-          <FcAddImage /> */}
+{
+  /* <span className="add-image">
+          <FcAddImage /> */
+}
 
-          // <a className="snd">
-          // <IoIosSend />
-    
+// <a className="snd">
+// <IoIosSend />

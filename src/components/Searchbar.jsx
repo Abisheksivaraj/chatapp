@@ -7,10 +7,10 @@ const Searchbar = () => {
   return (
     <>
       <div className="search">
-        <div class="box">
-    <div class="search-box">
+        <div className="box">
+    <div className="search-box">
       <input type="text" placeholder="search" className="search-bar" />
-      <label for="check" class="icon">
+      <label htmlFor="check" className="icon">
         <FaSearch/>
       </label>
     </div>

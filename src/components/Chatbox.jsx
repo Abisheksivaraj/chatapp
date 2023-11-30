@@ -10,28 +10,28 @@ const Chatbox = () => {
       <div className="user-chat">
         <img src={user1} alt="" className="client" />
         <div className="user-info">
-          <span className="chat-name">Abishek</span>
+          <span className="chat-name">Bala</span>
           <p className="cht">hello</p>
         </div>
       </div>
       <div className="user-chat">
         <img src={user1} alt="" className="client" />
         <div className="user-info">
-          <span className="chat-name">Abishek</span>
+          <span className="chat-name">Bala</span>
           <p className="cht">hello</p>
         </div>
       </div>
       <div className="user-chat">
         <img src={user1} alt="" className="client" />
         <div className="user-info">
-          <span className="chat-name">Abishek</span>
+          <span className="chat-name">Bala</span>
           <p className="cht">hello</p>
         </div>
       </div>
       <div className="user-chat">
         <img src={user1} alt="" className="client" />
         <div className="user-info">
-          <span className="chat-name">Abishek</span>
+          <span className="chat-name">Bala</span>
           <p className="cht">hello</p>
         </div>
       </div>

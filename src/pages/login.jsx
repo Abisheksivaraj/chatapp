@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import "../styles/Login.css";
 import { signInWithEmailAndPassword } from "firebase/auth";
-
+import "animate.css";
 const Login = () => {
   const [err, setErr] = useState(false);
   const navigate = useNavigate();
@@ -30,9 +30,11 @@ const Login = () => {
         />
 
         <span className="logo">
-          <h3>TWINKLE</h3>
+          <h3></h3>
         </span>
-        <p className="slogan">Login. Chat. Connect.</p>
+        <p className="animate__animated animate__zoomInUp" id="animate">
+          Login. Chat. Connect.
+        </p>
       </div>
 
       <div className="form-details">
@@ -63,7 +65,7 @@ const Login = () => {
 
             <button className="up">
               <Link to="/register">Register</Link>
-            </button>
+            </button> 
           </div>
 
           {err && <span>Something went wrong</span>}
