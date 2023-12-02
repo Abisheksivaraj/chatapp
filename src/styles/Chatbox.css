@@ -1,8 +1,4 @@
 
-/* .side-chats{
-  overflow: scroll;
-  height: 80vh;
-} */
 
 .chat-name{
   font-size: 16px;
@@ -25,3 +21,16 @@
   right: 0;
   bottom:0 ;
 }
+
+
+
+.abii{
+
+  height: 2.5rem;
+  margin-top: .5rem;
+}
+
+.logout{
+  margin-top: 5.3rem;
+  border-top: 1px solid gainsboro;}
+

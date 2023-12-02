@@ -1,5 +1,7 @@
 .home {
-  background-color: rgb(214, 214, 246);
+  background-image: url(https://assets-global.website-files.com/5a9ee6416e90d20001b20038/628a0c86a920a95176b4a5da_lavendar-gradient.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -17,8 +19,5 @@
   border-radius: 1rem;
   display: flex;
   overflow: hidden;
-  box-shadow: 15px 8px 15px 8px   rgb(195, 138, 248);
+  box-shadow: 15px 8px 15px 8px rgb(195, 138, 248);
 }
-
-
-

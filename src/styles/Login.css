@@ -1,38 +1,97 @@
 .registration {
   width: 100vw;
   height: 100vh;
-  background-color:rgb(214, 214, 246);
+  background-image: url(https://assets-global.website-files.com/5a9ee6416e90d20001b20038/628a0c86a920a95176b4a5da_lavendar-gradient.png);
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
-}
-
-img {
-  height: 6rem;
-  width: 6rem;
-}
-
-.profile-logo {
-  margin-top: -4rem;
   display: flex;
-  align-items: center;
-  margin-left: 4rem;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
-.registration {
+
+/* .registration {
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 
+} */
+
+
+
+/* left container */
+
+.left-container {
+  margin-right: 20rem;
 }
 
+.logo{
+height: 20rem;
+width: 20rem;
+}
+
+
+
+h2{
+
+    /* background: -webkit-linear-gradient(left,
+      #e7a4de #aab3e2); */
+  color: #e7a4de;  
+font-size: 2.5rem;
+font-weight: 900;
+position: fixed;
+-webkit-text-stroke: 0.1vw #e7a8de;
+}
+
+h2::before
+{
+
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  color:white;
+  -webkit-text-stroke: 0vw #e7a8de;
+  border-right: 2px solid #e7a4de;
+  overflow: hidden;
+  animation: animate 4s linear infinite;
+
+} 
+
+@keyframes animate
+{
+  0%,10%,100%
+  {
+    width:0;
+  }
+  70%,90%
+  {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+/* right container */
 .form-details {
-  background-color:whitesmoke;
-   padding: 20px 60px;
-  border-radius: 2rem; 
-  box-shadow: 0 0 10px rgba(228, 46, 46, 0.3);
-  backdrop-filter: blur(5px);
+
+  position: relative;
+  
+  width: 25vw;
+  height: 60vh;
+  border-radius: 20px; 
+  box-shadow: 0px 00px 20px 20px #edeef3;
+  backdrop-filter: blur(55px);
 
   form {
     text-align: center;
@@ -45,11 +104,12 @@ img {
 
 
 
+
 .inp-style {
   background-color: transparent;
   border: none;
   outline: none;
-  border-bottom: 1px solid rgb(164, 163, 163);
+  border-bottom: 1px solid w;
 }
 
 label {
@@ -59,12 +119,6 @@ label {
 
 }
 
-.logo {
-  font-size: 2rem;
-  font-weight: 700;
-  font-style: oblique;
-  text-align: center;
-}
 
 .title {
   font-size: 1.2rem;
@@ -88,7 +142,7 @@ a {
   text-decoration: none;
 
   color: rgb(26, 0, 128);
-  font-weight: 900;
+  font-weight: 900; 
 }
 
 .add {
@@ -101,9 +155,6 @@ a {
 
 
 
-#animate{
-  font-size: 2rem;
 
-}
 
 

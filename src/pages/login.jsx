@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import "../styles/Login.css";
 import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../firebase"; 
 import "animate.css";
+
 const Login = () => {
   const [err, setErr] = useState(false);
   const navigate = useNavigate();
@@ -15,7 +17,7 @@ const Login = () => {
     try {
       await signInWithEmailAndPassword(auth, email, password);
       navigate("/");
-    } catch (err) {
+    } catch (error) {
       setErr(true);
     }
   };
@@ -24,52 +26,51 @@ const Login = () => {
     <div className="registration">
       <div className="left-container">
         <img
-          src="src/images/chatting-bubbles-icon-vector-removebg-preview.png"
+          src="src/images/hlo-removebg-preview.png"
           alt=""
-          className="back"
+          className="logo"
         />
 
-        <span className="logo">
-          <h3></h3>
-        </span>
-        <p className="animate__animated animate__zoomInUp" id="animate">
-          Login. Chat. Connect.
-        </p>
-      </div>
+        <div className="slogan">
+          <h2 data-text="Login.Chat.Connect">Login.Chat.Connect</h2>
+        </div>
+        <div className="right-container">
+          <div className="form-details">
+            <br />
+            <div className="bg-color"></div>
+            <div className="title">Login </div>
+            <br />
+            <form onSubmit={handleSubmit}>
+              <div className="input-field">
+                <input
+                  type="email"
+                  className="inp-style"
+                  placeholder="Enter your email"
+                />
+              </div>
+              <br />
+              <div className="input-field">
+                <input
+                  type="password"
+                  className="inp-style"
+                  placeholder="Enter your password"
+                />
+              </div>
+              <br />
+              <div className="signs">
+                <button className="sign" type="submit">
+                  Login
+                </button>
 
-      <div className="form-details">
-        <br />
-        <div className="title">Login </div>
-        <br />
-        <form onSubmit={handleSubmit}>
-          <div className="input-field">
-            <input
-              type="email"
-              className="inp-style"
-              placeholder="Enter your mail"
-            />
-          </div>
-          <br />
-          <div className="input-field">
-            <input
-              type="password"
-              className="inp-style"
-              placeholder="Enter your password"
-            />
-          </div>
-          <br />
-          <div className="signs">
-            <button className="sign" type="submit">
-              Login
-            </button>
+                <button className="up">
+                  <Link to="/register">Register</Link>
+                </button>
+              </div>
 
-            <button className="up">
-              <Link to="/register">Register</Link>
-            </button> 
+              {err && <span>Something went wrong</span>}
+            </form>
           </div>
-
-          {err && <span>Something went wrong</span>}
-        </form>
+        </div>
       </div>
     </div>
   );
