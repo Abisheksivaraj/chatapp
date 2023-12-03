@@ -7,13 +7,14 @@ import Login from "./pages/Login";
 import Sidebar from "./components/Sidebar";
 import Home from "./pages/Home";
 
+
 function App() {
   const { currentUser } = useContext(AuthContext);
 
   const ProtectedRoute = ({ children }) => {
     if (!currentUser) {
-      return <Navigate to="/login" />
-    };
+      return <Navigate to="/login" />;
+    }
     return children;
   };
 

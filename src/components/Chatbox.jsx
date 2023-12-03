@@ -3,7 +3,7 @@ import { signOut } from "firebase/auth";
 import { onSnapshot, doc } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 import { db } from "../firebase";
-import { AuthContext } from "../context/AuthContext";
+import { AuthContext } from "../context/Authcontext";
 import { Link } from "react-router-dom";
 import { ChatContext } from "../context/ChatContext";
 import "../styles/Chatbox.css";

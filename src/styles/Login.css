@@ -1,58 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .registration {
+  background-image: url(https://assets-global.website-files.com/5a9ee6416e90d20001b20038/628a0c86a920a95176b4a5da_lavendar-gradient.png);
+  background-size: cover;
   width: 100vw;
   height: 100vh;
-  background-image: url(https://assets-global.website-files.com/5a9ee6416e90d20001b20038/628a0c86a920a95176b4a5da_lavendar-gradient.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow: hidden;
-  display: flex;
-    align-items: center;
-    justify-content: center;
-    /* position: relative; */
-}
-
-
-/* .registration {
-  height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
-
-} */
-
-.container{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
-/* left container */
-
-.left-container {
-  margin-right: 20rem;
+.logo {
+  position: relative;
 }
 
-.logo{
-height: 20rem;
-width: 20rem;
+.slogan {
+  position: absolute;
+  margin-left: 3rem;
+  bottom: 8rem;
 }
 
-
-
-h2{
-
-    /* background: -webkit-linear-gradient(left,
-      #e7a4de #aab3e2); */
-  color: #e7a4de;  
-font-size: 2.5rem;
-font-weight: 900;
-position: fixed;
--webkit-text-stroke: 0.1vw #e7a8de;
+h2 {
+  color: #e7a4de;
+  font-size: 2.5rem;
+  font-weight: 900;
+  position: fixed;
+  -webkit-text-stroke: 0.1vw #e7a8de;
 }
 
-h2::before
-{
+h2::before {
 
   content: attr(data-text);
   position: absolute;
@@ -60,55 +40,46 @@ h2::before
   left: 0;
   width: 0;
   height: 100%;
-  color:white;
+  color: white;
   -webkit-text-stroke: 0vw #e7a8de;
-  /* border-right: 2px solid #e7a4de; */
+
   overflow: hidden;
   animation: animate 4s linear infinite;
 
-} 
+}
 
-@keyframes animate
-{
-  0%,10%,100%
-  {
-    width:0;
+@keyframes animate {
+
+  0%,
+  10%,
+  100% {
+    width: 0;
   }
-  70%,90%
-  {
+
+  70%,
+  90% {
     width: 100%;
   }
 }
 
-
-
-
-
-
-
-
-/* right container */
-.form-details {
-
-  /* position: relative; */
-  
-  width: 25vw;
-  height: 60vh;
-  border-radius: 20px; 
-  box-shadow: 0px 00px 20px 20px #edeef3;
-  backdrop-filter: blur(55px);
-
-  form {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-
-  }
-
+.right-container {
+  background-color: aliceblue;
+  height: 22rem;
+  width: 20rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
 }
 
-
-
+.title {
+  margin-left: -1rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #e7a4de;
+  font-style: italic;
+}
 
 .inp-style {
   background-color: transparent;
@@ -117,49 +88,73 @@ h2::before
   border-bottom: 1px solid w;
 }
 
+.input-field {
+  border: 1px solid black;
+  height: 2rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: 5px;
+
+}
+
+
 label {
+  color: #e7a8de;
+  font-size: 1.5rem;
+  border-right: 1px solid black;
+  height: 22px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-
+  align-items: center;
+  justify-content: space-evenly;
 }
 
+.entry {
+  margin-top: 3rem;
+  margin-left: 3.5rem;
 
-.title {
-  font-size: 1.2rem;
-  text-decoration: underline;
-  font-weight: 500;
-  font-style: oblique;
-  text-align: center;
-}
-
-button {
-  width: 15rem;
-  padding: 5px;
-  font-size: 1rem;
-  background-color: blue;
-  color: white;
   cursor: pointer;
+}
+
+.signs {
+  margin-top: -3rem;
+}
+
+.reg {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+::placeholder {
+  color: #aab3e2;
+  font: 13px sans-serif;
+}
+
+
+.sign {
+  width: 5rem;
+  height: 1.5rem;
+  background-color: #f3c2ec;
   border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: aliceblue;
+  border-radius: 5px;
+  color: #aab3e2;
+  cursor: pointer;
+}
+
+.wrong {
+  margin-left: .5rem;
+  color: red;
+  text-align: center;
+  font-weight: 100;
 }
 
 a {
-  text-decoration: none;
-
-  color: rgb(26, 0, 128);
-  font-weight: 900; 
+  color: mediumblue;
+  font-size: 16px;
 }
-
-.add {
-  width: 2rem;
-  height: 2rem;
-}
-
-
-
-
-
-
-
-
-
