@@ -1,26 +1,26 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../styles/Chats.css";
 import Message from "./Messages"
 import Input from "./Input";
-
-
 import { IoVideocam } from "react-icons/io5";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoMdMore } from "react-icons/io";
+import { ChatContext } from "../context/Chatcontext";
 
 
 
 
 
 const Chats = () => {
+  const{data} = useContext(ChatContext);
   return (
     <div className="chat">
       <div className="info">
         <div className="chat-name">
           <div className="img-name">
-            <img src="src/images/1.jpg" className="image" alt="" />
+            <img src={data.user?.photoURL} className="image" alt="" />
           </div>
-          <span className="name">Bala</span>
+          <span className="name">{data.user?.displayName}</span>
         </div>
         <div className="icons">
           <div className="video">

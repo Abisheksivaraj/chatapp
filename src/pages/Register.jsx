@@ -21,22 +21,19 @@ const Register = () => {
     const file = e.target[3].files[0];
 
     try {
-      
       const res = await createUserWithEmailAndPassword(auth, email, password);
 
-      
       const date = new Date().getTime();
       const storageRef = ref(storage, `${displayName + date}`);
 
       await uploadBytesResumable(storageRef, file).then(() => {
         getDownloadURL(storageRef).then(async (downloadURL) => {
           try {
-          
             await updateProfile(res.user, {
               displayName,
               photoURL: downloadURL,
             });
-            
+
             await setDoc(doc(db, "users", res.user.uid), {
               uid: res.user.uid,
               displayName,
@@ -44,7 +41,6 @@ const Register = () => {
               photoURL: downloadURL,
             });
 
-            
             await setDoc(doc(db, "userChats", res.user.uid), {});
             navigate("/");
           } catch (err) {

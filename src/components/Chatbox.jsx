@@ -10,7 +10,9 @@ import { Link } from "react-router-dom";
 
 const Chatbox = () => {
   const [chats, setChats] = useState([]);
-  const { currentUser } = useContext(AuthContext);
+  
+const { currentUser } = useContext(AuthContext);
+const { dispatch } = useContext(chatContext);
 
   useEffect(() => {
     const getChats = () => {
@@ -30,12 +32,14 @@ const Chatbox = () => {
     currentUser.uid && getChats();
   }, [currentUser.uid]);
 
-  console.log(Object.entries(chats));
+  const handleSelect = (u) => {
+    dispatch({type:"CHANGE_USER",payload:u})
+  };
 
   return (
-    <div className="side-chats">
-      {Object.entries(chats).map((chat) => (
-        <div className="user-chat" key={chat[0]}>
+    <div className="chats">
+      {Object.entries(chats)?.map((chat) => (
+        <div className="user-chat" key={chat[0]} onClick={() => handleSelect(chat[1].userInfo)}>
           <img src={chat[1].userInfo.photoURL} alt="" className="client" />
           <div className="user-info">
             <span className="chat-name">{chat[1].userInfo.displayName}</span>

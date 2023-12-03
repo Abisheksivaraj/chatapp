@@ -24,16 +24,19 @@ const Login = () => {
 
   return (
     <div className="registration">
-      <div className="left-container">
-        <img
-          src="src/images/hlo-removebg-preview.png"
-          alt=""
-          className="logo"
-        />
+      <div className="container">
+        <div className="left-container">
+          <img
+            src="src/images/hlo-removebg-preview.png"
+            alt=""
+            className="logo"
+          />
+        </div>
 
         <div className="slogan">
           <h2 data-text="Login.Chat.Connect">Login.Chat.Connect</h2>
         </div>
+
         <div className="right-container">
           <div className="form-details">
             <br />

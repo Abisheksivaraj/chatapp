@@ -8,7 +8,7 @@
   display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
+    /* position: relative; */
 }
 
 
@@ -20,7 +20,12 @@
 
 } */
 
-
+.container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
 
 /* left container */
 
@@ -57,7 +62,7 @@ h2::before
   height: 100%;
   color:white;
   -webkit-text-stroke: 0vw #e7a8de;
-  border-right: 2px solid #e7a4de;
+  /* border-right: 2px solid #e7a4de; */
   overflow: hidden;
   animation: animate 4s linear infinite;
 
@@ -85,7 +90,7 @@ h2::before
 /* right container */
 .form-details {
 
-  position: relative;
+  /* position: relative; */
   
   width: 25vw;
   height: 60vh;
