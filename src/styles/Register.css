@@ -1,0 +1,65 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.registration {
+  background-image: url(https://assets-global.website-files.com/5a9ee6416e90d20001b20038/628a0c86a920a95176b4a5da_lavendar-gradient.png);
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+
+}
+
+.profile{
+
+  top: 10rem;}
+
+  /* .add{
+    height: 8rem;
+    width: 8rem; */
+    /* margin-left: -8rem; */
+  /* } */
+
+  /* .formm-details{
+  background-color: aliceblue;
+    margin-left: -11rem;
+  } */
+
+  /* .right{
+    background-color: aliceblue;
+    height: 25rem;
+      width: 30rem;}
+
+.inp-style {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid w;
+}
+
+.input-field {
+  border: 1px solid black;
+  height: 2rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  /* gap: 5px; */
+  /* border-radius: 5px; */
+
+/* }
+
+
+label {
+  color: #e7a8de;
+  font-size: 1.5rem;
+  border-right: 1px solid black;
+  height: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-evenly; */
+/* } */ 

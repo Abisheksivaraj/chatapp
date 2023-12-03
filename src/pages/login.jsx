@@ -25,7 +25,7 @@ const Login = () => {
   };
 
   return (
-    <div className="registration">
+    <div className="login">
       <div className="left-container">
         <img
           src="src/images/hlo-removebg-preview.png"
