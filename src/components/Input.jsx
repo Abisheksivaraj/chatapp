@@ -2,20 +2,18 @@ import React, { useState, useContext } from "react";
 import { IoSendSharp } from "react-icons/io5";
 import { BsEmojiSmile } from "react-icons/bs";
 import { MdOutlineAttachFile } from "react-icons/md";
+import { AuthContext } from "../context/AuthContext";
+import { ChatContext } from "../context/ChatContext";
 import {
-  Timestamp,
   arrayUnion,
-  updateDoc,
-  serverTimestamp,
   doc,
-  ref,
-  uploadBytesResumable,
-  getDownloadURL,
-} from "firebase/firestore"; // Add missing imports
+  serverTimestamp,
+  Timestamp,
+  updateDoc,
+} from "firebase/firestore";
+import { db, storage } from "../firebase";
 import { v4 as uuid } from "uuid";
-import { AuthContext } from "../your-auth-context"; // Replace with the actual path to your AuthContext
-import { ChatContext } from "../your-chat-context"; // Replace with the actual path to your ChatContext
-import { db, storage } from "../your-firebase-config-file"; // Replace with the actual path to your Firebase config file
+import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 
 const Input = () => {
   const [text, setText] = useState("");
@@ -31,12 +29,8 @@ const Input = () => {
       const uploadTask = uploadBytesResumable(storageRef, img);
 
       uploadTask.on(
-        "state_changed",
-        (snapshot) => {
-          // TODO: Handle upload progress
-        },
         (error) => {
-          // TODO: Handle upload error
+          //TODO:Handle Error
         },
         () => {
           getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {
@@ -80,7 +74,6 @@ const Input = () => {
     setText("");
     setImg(null);
   };
-
   return (
     <div className="input">
       <div className="msg">
@@ -100,6 +93,7 @@ const Input = () => {
           placeholder="Message"
           className="text-box"
           onChange={(e) => setText(e.target.value)}
+          value={text}
         />
       </div>
       <div className="send">

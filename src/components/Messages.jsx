@@ -1,29 +1,28 @@
-// import React, { useContext, useEffect, useState } from "react"; // Added useState
-// import Messagebox from "./Messagebox";
-// import "../styles/messages.css";
-// import { ChatContext } from "../context/Chatcontext";
-// import { onSnapshot, doc } from "firebase/firestore"; // Added doc
-// import { db } from "../your-firebase-config-file"; // Import your Firebase config file
+
+import { onSnapshot, doc } from "firebase/firestore";
+import { db } from "../firebase"; 
 import React, { useContext, useEffect } from "react";
 import Message from "./Messagebox";
 import "../styles/messages.css";
-import { ChatContext } from "../context/Chatcontext";
+import { ChatContext } from "../context/ChatContext";
 import { onSnapshot } from "firebase/firestore";
 
 
 const Messages = () => {
-  const [messages, setMessages] = useState([]); // Added useState
+  const [messages, setMessages] = useState([]);
   const { data } = useContext(ChatContext);
 
   useEffect(() => {
     const unSub = onSnapshot(doc(db, "chats", data.chatId), (doc) => {
-      doc.exists() && setMessages(doc.data().messages); // Assuming messages is an array in your data
+      doc.exists() && setMessages(doc.data().messages);
     });
 
     return () => {
       unSub();
     };
   }, [data.chatId]);
+
+  console.log(messages);
 
   return (
     <div className="messages">
