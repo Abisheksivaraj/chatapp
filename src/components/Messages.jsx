@@ -1,12 +1,10 @@
-
 import { onSnapshot, doc } from "firebase/firestore";
-import { db } from "../firebase"; 
-import React, { useContext, useEffect } from "react";
-import Message from "./Messagebox";
+import { db } from "../firebase";
+import React, { useContext, useEffect, useState } from "react";
 import "../styles/messages.css";
 import { ChatContext } from "../context/ChatContext";
-import { onSnapshot } from "firebase/firestore";
-
+// import { onSnapshot } from "firebase/firestore";
+import Messagebox from "./Messagebox";
 
 const Messages = () => {
   const [messages, setMessages] = useState([]);
@@ -27,7 +25,7 @@ const Messages = () => {
   return (
     <div className="messages">
       {messages.map((m) => (
-        <Message message={m} key={m.id} /> // Assuming m has an id property
+        <Messagebox message={m} key={m.id} />
       ))}
     </div>
   );

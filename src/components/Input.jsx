@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import { IoSendSharp } from "react-icons/io5";
 import { BsEmojiSmile } from "react-icons/bs";
 import { MdOutlineAttachFile } from "react-icons/md";
-import { AuthContext } from "../context/AuthContext";
+import { AuthContext } from "../context/Authcontext.jsx";
 import { ChatContext } from "../context/ChatContext";
 import {
   arrayUnion,
@@ -14,6 +14,7 @@ import {
 import { db, storage } from "../firebase";
 import { v4 as uuid } from "uuid";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
+import "../styles/Input.css";
 
 const Input = () => {
   const [text, setText] = useState("");
@@ -29,9 +30,7 @@ const Input = () => {
       const uploadTask = uploadBytesResumable(storageRef, img);
 
       uploadTask.on(
-        (error) => {
-          //TODO:Handle Error
-        },
+        (error) => {},
         () => {
           getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {
             await updateDoc(doc(db, "chats", data.chatId), {
@@ -46,7 +45,7 @@ const Input = () => {
           });
         }
       );
-    } else {
+    } else if (text) {
       await updateDoc(doc(db, "chats", data.chatId), {
         messages: arrayUnion({
           id: uuid(),

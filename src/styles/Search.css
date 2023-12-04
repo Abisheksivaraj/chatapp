@@ -5,26 +5,34 @@
   font-family: 'Poppins', sans-serif;
 }
 
-
-
-
 .search-box {
   height: 2rem;
   display: flex;
   width: 16.2rem;
   margin-left: 1.7rem;
   border-radius: 8px;
-  background-color:rgb(230, 240, 255);
+  background-color: rgb(230, 240, 255);
+  position: relative
 }
 
-.search-bar{
-  background-color:rgb(230, 236,255);
+.search-bar {
+  background-color: rgb(230, 236, 255);
   width: 15rem;
   margin-left: .4rem;
   font-size: 16px;
-  
   border: none;
   outline: none;
+  padding-left: 30px;
+}
+
+.search-icon {
+  position: absolute;
+  top: 12%;
+  left: 10px;
+}
+
+.search-bar:focus  {
+  background-color: red;
 }
 
 
@@ -32,7 +40,7 @@
 
 
 .user-chat:hover {
-  background-color:lavender;
+  background-color: lavender;
   cursor: pointer;
 }
 
@@ -50,8 +58,7 @@
   border-radius: 50%;
 }
 
-.box{
+.box {
   margin-top: 10px;
-border-bottom: 2px solid rgb(251, 239, 239);
+  border-bottom: 2px solid rgb(251, 239, 239);
 }
-

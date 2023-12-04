@@ -9,7 +9,6 @@ import { FaUser } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { RiLockPasswordFill } from "react-icons/ri";
 
-
 const Register = () => {
   const [err, setErr] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -18,13 +17,15 @@ const Register = () => {
   const handleSubmit = async (e) => {
     setLoading(true);
     e.preventDefault();
+    console.log(e.target);
     const displayName = e.target[0].value;
     const email = e.target[1].value;
     const password = e.target[2].value;
-    const file = e.target[3].files[0];
+    const file = e.target[3]?.files[0];
 
     try {
       const res = await createUserWithEmailAndPassword(auth, email, password);
+      console.log(res);
 
       const date = new Date().getTime();
       const storageRef = ref(storage, `${displayName + date}`);
@@ -76,71 +77,75 @@ const Register = () => {
       <div className="right">
         <div className="formm-details">
           <br />
-          <div className="profile">
-            <input style={{ display: "none" }} id="file" type="file" />
-            <label htmlFor="file">
-              <img
-                src="src/images/add_profile-removebg-preview.png"
-                alt=""
-                className="add"
-              />
-            </label>
-          </div>
           <br />
-            <form onSubmit={handleSubmit}>
-              <div className="inputt-field">
-                <label htmlFor="name">
-                  <FaUser />
-                </label>
-                <input
-                  type="text"
-                  className="inp-style"
-                  placeholder="Enter your name"
-                />
-              </div>
-              <br />
+          <form onSubmit={handleSubmit}>
+            <div className="inputt-field">
+              <label htmlFor="name">
+                <FaUser />
+              </label>
+              <input
+                type="text"
+                className="inp-style"
+                placeholder="Enter your name"
+                autoComplete="false"
+              />
+            </div>
+            <br />
 
-              <div className="inputt-field">
-                <label htmlFor="mail">
-                  <IoMdMail />
-                </label>
-                <input
-                  type="email"
-                  className="inp-style"
-                  placeholder="Enter your mail"
-                />
-              </div>
-              <br />
-              <div className="inputt-field">
-                <label htmlFor="password">
-                  <RiLockPasswordFill />
-                </label>
-                <input
-                  type="password"
-                  className="inp-style"
-                  placeholder="Enter your password"
-                />
-              </div>
-              <br />
+            <div className="inputt-field">
+              <label htmlFor="mail">
+                <IoMdMail />
+              </label>
+              <input
+                type="email"
+                className="inp-style"
+                placeholder="Enter your mail"
+                autoComplete="false"
+              />
+            </div>
+            <br />
+            <div className="inputt-field">
+              <label htmlFor="password">
+                <RiLockPasswordFill />
+              </label>
+              <input
+                type="password"
+                className="inp-style"
+                placeholder="Enter your password"
+                autoComplete="false"
+              />
+            </div>
+            <br />
 
-              <button className="sign" disabled={loading}>
-                Sign up
-              </button>
-              {loading && "Uploading and compressing the image please wait..."}
+            <div className="profile">
+              <input style={{ display: "none" }} id="file" type="file" />
+              <label htmlFor="file">
+                <img
+                  src="src/images/add_profile-removebg-preview.png"
+                  alt=""
+                  className="add"
+                />
+              </label>
+            </div>
 
-              {err && <span>Something went wrong</span>}
-            </form>
-            <p>
-              <h3>
-                Already registered...?{" "}
-                <span className="log">
-                  <Link to="/login">Login</Link>
-                </span>
-              </h3>
-            </p>
-          </div>
+            <button className="sign" disabled={loading}>
+              Sign up
+            </button>
+            {loading && "Uploading and compressing the image please wait..."}
+
+            {err && <span>Something went wrong</span>}
+          </form>
+          <p>
+            <span>
+              Already registered...?{" "}
+              <span className="log">
+                <Link to="/login">Login</Link>
+              </span>
+            </span>
+          </p>
         </div>
       </div>
+    </div>
   );
 };
 

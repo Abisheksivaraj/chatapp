@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import "../styles/Login.css";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../firebase"; 
+import { auth } from "../firebase";
 import "animate.css";
 import { IoMdMail } from "react-icons/io";
 import { RiLockPasswordFill } from "react-icons/ri";
@@ -53,6 +53,7 @@ const Login = () => {
                 type="email"
                 className="inp-style"
                 placeholder="Enter your email"
+                autoComplete="false"
               />
             </div>
             <br />
@@ -64,6 +65,7 @@ const Login = () => {
                 type="password"
                 className="inp-style"
                 placeholder="Enter your password"
+                autoComplete="false"
               />
             </div>
             <div className="entry">
@@ -80,10 +82,10 @@ const Login = () => {
         <div className="button-details">
           <div className="signs">
             <div className="reg">
-              <p>Dont have an account?</p>
-              <a className="up">
+              <p>Don&apos;t have an account?</p>
+              <div className="up">
                 <Link to="/register">Register</Link>
-              </a>
+              </div>
             </div>
           </div>
         </div>

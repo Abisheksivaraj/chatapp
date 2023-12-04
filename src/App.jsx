@@ -4,9 +4,8 @@ import { useContext } from "react";
 import { AuthContext } from "./context/Authcontext";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
-import Sidebar from "./components/Sidebar";
+//import Sidebar from "./components/Sidebar";
 import Home from "./pages/Home";
-
 
 function App() {
   const { currentUser } = useContext(AuthContext);

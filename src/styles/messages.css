@@ -1,8 +1,8 @@
 .messages {
-padding: 10px;
+  padding: 10px;
   background-color: white;
   height: 72.5vh;
-  overflow-y:scroll;
+  overflow-y: scroll;
 }
 
 ::-webkit-scrollbar-track {
@@ -14,39 +14,40 @@ padding: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color:#952bff;
+  background-color: #952bff;
   border-radius: 8px;
 }
 
-.message{
+.message {
   display: flex;
   gap: 1.3rem;
   margin-bottom: 20px;
 
   &.owner {
-      flex-direction: row-reverse;
+    flex-direction: row-reverse;
 
-.para{
-        background-color:#b266ff;
-      }
+    .para {
+      background-color: #b266ff;
     }
+  }
 }
 
-.msg-img{
-    height: 2.5rem;
-    width: 2.5rem;
-    border-radius: 50%;
-    object-fit:cover;
+.msg-img {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
-.msg-info{
+.msg-info {
   display: flex;
   flex-direction: column;
   color: gray;
   font-weight: 300;
 
 }
-.msg-content{
+
+.msg-content {
 
   max-width: 80%;
   display: flex;
@@ -56,10 +57,10 @@ padding: 10px;
 
 }
 
-.para{
+.para {
   background-color: rgb(218, 217, 217);
-padding: 10px 20px;
-border-top-right-radius: 5px;
-border-bottom-right-radius: 5px;
-border-bottom-left-radius: 5px;
+  padding: 10px 20px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
 }

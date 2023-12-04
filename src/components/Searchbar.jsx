@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { FaSearch } from "react-icons/fa";
 import "../styles/Search.css";
 
@@ -20,6 +20,8 @@ const Searchbar = () => {
   const [username, setUsername] = useState("");
   const [user, setUser] = useState(null); // Corrected initial state value
   const [err, setErr] = useState(false); // Corrected initial state value
+
+  const { currentUser } = useContext(AuthContext);
 
   const handleSearch = async () => {
     const q = query(
@@ -81,13 +83,12 @@ const Searchbar = () => {
         <div className="search-box">
           <input
             type="text"
-            placeholder="search..."
             className="search-bar"
             onKeyDown={handleKey}
             onChange={(e) => setUsername(e.target.value)}
             value={username}
           />
-          <label htmlFor="check" className="icon">
+          <label htmlFor="check" className="search-icon">
             <FaSearch />
           </label>
         </div>

@@ -4,7 +4,6 @@ import Navbar from "./Navbar";
 import Search from "./Searchbar";
 import Chatbox from "./Chatbox";
 
-
 import "../styles/Sidebar.css";
 import "../styles/Search.css";
 
@@ -14,7 +13,6 @@ const Sidebar = () => {
       <Navbar />
       <Search />
       <Chatbox />
-      
     </div>
   );
 };

@@ -1,36 +1,36 @@
-
-
-.chat-name{
+.chat-name {
   font-size: 16px;
   font-weight: 100;
 }
 
-.cht{
+.cht {
   font-size: 14px;
   color: gray;
 }
 
-.client{
+.client {
   margin-top: 6px;
 }
 
 
 
-.call{
-  position:relative;
+.call {
+  position: relative;
   right: 0;
-  bottom:0 ;
+  bottom: 0;
 }
 
 
 
-.abii{
+.abii {
 
   height: 2.5rem;
   margin-top: .5rem;
 }
 
-.logout{
-  margin-top: 5.3rem;
-  border-top: 1px solid gainsboro;}
-
+.logout {
+  position: absolute;
+  bottom: 0;
+  /* margin-top: 5.3rem; */
+  border-top: 1px solid gainsboro;
+}

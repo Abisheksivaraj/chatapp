@@ -1,54 +1,57 @@
   .chat {
     flex: 2;
-    height: 74px;
+    height: 100%;
     background-color: white;
     position: relative;
-    border-bottom: 11px solid rgb(241, 238, 238);
+    /* border-bottom: 11px solid rgb(241, 238, 238); */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
-  .info{
+  .info {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    color:rgb(81, 81, 114);
+    color: rgb(81, 81, 114);
   }
 
-  .name{
+  .name {
     color: rgb(71, 71, 71);
     font-size: 16px;
   }
 
-.chat-name{
-  display: flex;
-  align-items: center;
-  gap: 13px;
-}
-    .image {
-      height: 2.5rem;
-      width: 2.5rem;
-      border-radius: 2rem;
-    }
-
-  .icons{
+  .chat-name {
     display: flex;
-    gap: 14px;
-  padding: 1px;
-  font-size: 1rem;
+    align-items: center;
+    gap: 13px;
   }
 
-  .video:hover{
+  .image {
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 2rem;
+  }
+
+  .icons {
+    display: flex;
+    gap: 14px;
+    padding: 1px;
+    font-size: 1rem;
+  }
+
+  .video:hover {
     color: navy;
     cursor: pointer;
   }
 
-    .call:hover {
-      color: navy;
-      cursor: pointer;
-    }
+  .call:hover {
+    color: navy;
+    cursor: pointer;
+  }
 
-        .more:hover {
-          color: navy;
-          cursor: pointer;
-        }
-
+  .more:hover {
+    color: navy;
+    cursor: pointer;
+  }
