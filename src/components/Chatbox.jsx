@@ -51,11 +51,7 @@ const Chatbox = () => {
         ))}
       <div className="logout">
         <Link to="/login">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC4JOEoIPhHs6U5ouuLDfLt1i3x0q0Kh8qnfH7BsqX9c1QzBDvSzvd5pDr9EA-s5Z9Ic8&usqp=CAU"
-            alt=""
-            className="abii"
-          />
+          <button className="out">Logout</button>
         </Link>
       </div>
     </div>

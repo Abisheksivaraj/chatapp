@@ -139,7 +139,7 @@ const Register = () => {
             {err && <span className="wrong">Something went wrong</span>}
           </form>
             <span className="login-reg">
-              Already registered...?{" "}
+              Already registered...?
               <span className="log">
                 <Link to="/login">Login</Link>
               </span>

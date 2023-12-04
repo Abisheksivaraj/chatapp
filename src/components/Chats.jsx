@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import Message from "./Messages";
 import Input from "./Input";
 import { IoVideocam } from "react-icons/io5";
-import { FaPhoneAlt } from "react-icons/fa";
+import { IoMdCall } from "react-icons/io";
 import { IoMdMore } from "react-icons/io";
 import { ChatContext } from "../context/ChatContext";
 import "../styles/Chats.css";
@@ -24,7 +24,7 @@ const Chats = () => {
             <IoVideocam />
           </div>
           <div className="call">
-            <FaPhoneAlt />
+            <IoMdCall />
           </div>
           <div className="more">
             <IoMdMore />

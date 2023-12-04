@@ -28,9 +28,17 @@
   margin-top: .5rem;
 }
 
-.logout {
+.out {
+  height: 2rem;
+  width: 5rem;
   position: absolute;
-  bottom: 0;
-  /* margin-top: 5.3rem; */
+  bottom: 10px;
+  left: 10px;
   border-top: 1px solid gainsboro;
+  border: none;
+  border-radius: 10px;
+  border: 2px solid #aab3e2;
+  box-shadow: 1px 1px 1px 1px;
+  background-color: #e7a4de;
+  cursor: pointer;
 }
