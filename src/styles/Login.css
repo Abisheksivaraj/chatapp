@@ -66,6 +66,7 @@ h2::before {
   background-color: aliceblue;
   min-height: 22rem;
   width: 20rem;
+  box-shadow: 18px 8px 18px 10px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -129,8 +130,8 @@ label {
 }
 
 ::placeholder {
-  /* color: #aab3e2; */
-  color: black ;
+  color: #aab3e2;
+  /* color: black ; */
   font: 13px sans-serif;
 }
 

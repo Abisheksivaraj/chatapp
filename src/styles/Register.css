@@ -13,17 +13,118 @@
   align-items: center;
 }
 
-.inp-style{
-  color: black;
+
+.right {
+  border-radius: 10px;
+  box-shadow: 18px 8px 18px 10px;
+  background-color: aliceblue;
+  width: 20rem;
+  height: 26rem;
 }
 
-.profile{
-  margin-top: 5rem;
+.head {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #e7a4de;
+  font-style: italic;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  font-size: 2rem;
 }
 
-.sign{
-  margin-top: 5rem;
+.formm-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+.inputt-field {
+  border: 1px solid black;
+  height: 2rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: 5px;
+}
+
+.inpp-style {
+  
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid w;
+}
+
+
+label {
+  color: #e7a8de;
+  font-size: 1.5rem;
+  border-right: 1px solid black;
+  height: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+
+.profile {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+
+.add{
+  height: 4rem;
+  width: 4rem;
+}
+
+
+.add-img{
+  font-size: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+margin-left: 10px;
+color: #aab3e2;
+}
+
+
+.sign-up{
+      width: 7rem;
+      height: 2rem;
+      background-color: #f3c2ec;
+      border: none;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: aliceblue;
+      border-radius: 5px;
+      color: #aab3e2;
+      cursor: pointer;
+      text-align: center;
+      margin-top: 2rem;
+      margin-left: 2rem;
+    }
+
+    .wait{
+      color: blue;
+      margin-left: 3rem;
+    }
+
+    .login-reg{
+      margin-top: 12px;
+    }
+
+
+  
+
+
 
 
 

@@ -75,6 +75,7 @@ const Register = () => {
         </div>
       </div>
       <div className="right">
+        <div className="head">Register</div>
         <div className="formm-details">
           <br />
           <br />
@@ -85,7 +86,7 @@ const Register = () => {
               </label>
               <input
                 type="text"
-                className="inp-style"
+                className="inpp-style"
                 placeholder="Enter your name"
                 autoComplete="false"
               />
@@ -98,7 +99,7 @@ const Register = () => {
               </label>
               <input
                 type="email"
-                className="inp-style"
+                className="inpp-style"
                 placeholder="Enter your mail"
                 autoComplete="false"
               />
@@ -110,7 +111,7 @@ const Register = () => {
               </label>
               <input
                 type="password"
-                className="inp-style"
+                className="inpp-style"
                 placeholder="Enter your password"
                 autoComplete="false"
               />
@@ -126,23 +127,24 @@ const Register = () => {
                   className="add"
                 />
               </label>
+              <span className="add-img">Add image</span>
             </div>
 
-            <button className="sign" disabled={loading}>
+            <button className="sign-up" disabled={loading}>
               Sign up
             </button>
-            {loading && "Uploading and compressing the image please wait..."}
-
-            {err && <span>Something went wrong</span>}
+            <br />
+            {loading && <span className="wait">please wait...</span> }
+              <br />
+            {err && <span className="wrong">Something went wrong</span>}
           </form>
-          <p>
-            <span>
+            <span className="login-reg">
               Already registered...?{" "}
               <span className="log">
                 <Link to="/login">Login</Link>
               </span>
             </span>
-          </p>
+          
         </div>
       </div>
     </div>
