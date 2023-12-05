@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import profile from "../images/1.jpg";
+
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth, db, storage } from "../firebase";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
@@ -121,11 +123,7 @@ const Register = () => {
             <div className="profile">
               <input style={{ display: "none" }} id="file" type="file" />
               <label htmlFor="file">
-                <img
-                  src="src/images/add_profile-removebg-preview.png"
-                  alt=""
-                  className="add"
-                />
+                <img src={profile} alt="" className="add" />
               </label>
               <span className="add-img">Add image</span>
             </div>
@@ -134,17 +132,16 @@ const Register = () => {
               Sign up
             </button>
             <br />
-            {loading && <span className="wait">please wait...</span> }
-              <br />
+            {loading && <span className="wait">please wait...</span>}
+            <br />
             {err && <span className="wrong">Something went wrong</span>}
           </form>
-            <span className="login-reg">
-              Already registered...?
-              <span className="log">
-                <Link to="/login">Login</Link>
-              </span>
+          <span className="login-reg">
+            Already registered...?
+            <span className="log">
+              <Link to="/login">Login</Link>
             </span>
-          
+          </span>
         </div>
       </div>
     </div>
