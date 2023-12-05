@@ -16,9 +16,19 @@ import { v4 as uuid } from "uuid";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import "../styles/Input.css";
 
+import Picker from "emoji-picker-react";
+
 const Input = () => {
   const [text, setText] = useState("");
   const [img, setImg] = useState(null);
+  const [inputStr, setInputStr] = useState("");
+  const [showPicker, setShowPicker] = useState(false);
+  const [isEmojiMode, setIsEmojiMode] = useState(false); // Track input mode
+
+  const onEmojiClick = (event, emojiObject) => {
+    setText((prevText) => prevText + emojiObject.emoji);
+    setShowPicker(false);
+  };
 
   const { currentUser } = useContext(AuthContext);
   const { data } = useContext(ChatContext);
@@ -73,6 +83,7 @@ const Input = () => {
     setText("");
     setImg(null);
   };
+
   return (
     <div className="input">
       <div className="msg">
@@ -87,16 +98,28 @@ const Input = () => {
             <MdOutlineAttachFile />
           </label>
         </span>
-        <input
-          type="text"
-          placeholder="Message"
-          className="text-box"
-          onChange={(e) => setText(e.target.value)}
-          value={text}
-        />
+        {isEmojiMode ? (
+          <span className="emoji-input">
+            <Picker
+              pickerStyle={{ width: "100%" }}
+              onEmojiClick={onEmojiClick}
+            />
+          </span>
+        ) : (
+          <input
+            type="text"
+            placeholder="Message"
+            className="text-box"
+            onChange={(e) => setText(e.target.value)}
+            value={text}
+          />
+        )}
       </div>
       <div className="send">
-        <span className="emoji">
+        <span
+          className="toggle-mode"
+          onClick={() => setIsEmojiMode((prevMode) => !prevMode)}
+        >
           <BsEmojiSmile />
         </span>
 

@@ -42,3 +42,10 @@
   background-color: #e7a4de;
   cursor: pointer;
 }
+
+
+@media (max-width: 400px) {
+  .chats {
+    width: 100px;
+  }
+}

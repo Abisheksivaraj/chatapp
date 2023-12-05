@@ -122,6 +122,100 @@ color: #aab3e2;
     }
 
 
+
+
+        @media(max-width:400px) {
+          .registration {
+            flex-direction: column;
+            overflow: hidden;
+            width: 100vw;
+            height: 100vh;
+            overflow-y: scroll;
+          }
+    
+          .conversation {
+              display: none;
+          }
+
+          .right{
+          margin-top: 2.7rem;
+          }
+    
+          .slogan {
+            position: absolute;
+            top: 8rem;
+            right: 21.6rem;
+            display: none;
+    
+          }
+    
+        }
+    
+        @media(max-width:800px) {
+          .login {
+            flex-direction: column;
+            overflow: hidden;
+            width: 100vw;
+            height: 100vh;
+            overflow-y: scroll;
+          }
+    
+          .conversation {
+            width: 25rem;
+            position: relative;
+          }
+    
+          .slogan {
+            top: 8rem;
+            left: 13rem;
+            display: none;
+    
+          }
+    
+          h2 {
+            margin-top: 1rem;
+            margin-left: 1rem;
+            text-align: center;
+            font-size: 1.5rem;
+          }
+    
+        }
+    
+    
+        @media(max-width:1200px) {
+          .login {
+            flex-direction: row;
+            overflow: hidden;
+            width: 100vw;
+            height: 100vh;
+            overflow-y: scroll;
+          }
+    
+          .logo {
+    
+            height: 15rem;
+            width: 15rem;
+            position: relative;
+          }
+    
+          .slogan {
+            position: absolute;
+            bottom: 2rem;
+            margin-left: 2rem;
+            display: none;
+    
+    
+          }
+    
+          h2 {
+            margin-top: 1rem;
+            margin-left: 2rem;
+            text-align: center;
+            font-size: 1.5rem;
+          }
+    
+        }
+
   
 
 

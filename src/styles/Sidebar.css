@@ -1,7 +1,13 @@
   .sidebar {
     flex: 1;
-    background:white;
+    background: white;
     border-right: 1px solid rgb(232, 230, 230);
     position: relative
-  
+  }
+
+
+  @media (max-width:400px) {
+    .sidebar {
+      width: 100px;
+    }
   }

@@ -66,7 +66,7 @@ const Register = () => {
   return (
     <div className="registration">
       <div className="left">
-        <img src={image2} alt="" className="conversation" />
+        <img src={image2 } alt="" className="conversation" />
         <div className="slogan">
           <h2 data-text="Connect and meet new people">
             Connect and meet new people
