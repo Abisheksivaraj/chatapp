@@ -3,9 +3,10 @@ import { useNavigate, Link } from "react-router-dom";
 import "../styles/Login.css";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
-import "animate.css";
 import { IoMdMail } from "react-icons/io";
 import { RiLockPasswordFill } from "react-icons/ri";
+
+import image1 from "../images/image1.png"
 
 const Login = () => {
   const [err, setErr] = useState(false);
@@ -27,11 +28,7 @@ const Login = () => {
   return (
     <div className="login">
       <div className="left-container">
-        <img
-          src="src/images/hlo-removebg-preview.png"
-          alt=""
-          className="logo"
-        />
+        <img src={image1} alt="" className="logo" />
         <div className="slogan">
           <h2 data-text="Login.Chat.Connect">Login.Chat.Connect</h2>
         </div>

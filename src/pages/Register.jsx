@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import profile from "../images/1.jpg";
+import profile from "../images/profile.png";
+import image2 from "../images/regbg.png";
 
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth, db, storage } from "../firebase";
@@ -65,11 +66,7 @@ const Register = () => {
   return (
     <div className="registration">
       <div className="left">
-        <img
-          src="src/images/reg_design-removebg-preview.png"
-          alt=""
-          className="conversation"
-        />
+        <img src={image2} alt="" className="conversation" />
         <div className="slogan">
           <h2 data-text="Connect and meet new people">
             Connect and meet new people
