@@ -1,4 +1,4 @@
-import React, { useContext , useState } from "react";
+import React, { useContext, useState } from "react";
 import Message from "./Messages";
 import Input from "./Input";
 import { IoVideocam } from "react-icons/io5";
@@ -24,7 +24,7 @@ const Chats = () => {
           <div className="img-name">
             <img src={data.user.photoURL} className="image" alt="user" />
           </div>
-          <span className="name">
+          <span className={darkMode ? "name-dark" : "name"}>
             {data.user?.displayName}
           </span>
         </div>

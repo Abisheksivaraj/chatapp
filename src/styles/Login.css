@@ -164,7 +164,6 @@ a {
 @media(max-width:400px) {
   .login {
     flex-direction: column;
-    /* margin: 0 25px; */
     overflow: hidden;
     width: 100vw;
     height: 100vh;
@@ -175,11 +174,13 @@ a {
   height: 10rem;
   width: 10rem;
   position: relative;
+  display: none;
   }
   .slogan{
     position: absolute;
     top: 8rem;
     right: 21.6rem;
+    display: none;
 
   }
   h2{

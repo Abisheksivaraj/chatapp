@@ -52,7 +52,7 @@ const Chatbox = () => {
           >
             <img src={chat[1].userInfo?.photoURL} alt="" className="client" />
             <div className="user-info">
-              <span className="chat-name">{chat[1].userInfo?.displayName}</span>
+              <span className={darkMode?"chat-name-dark":"chat-name"}>{chat[1].userInfo?.displayName}</span>
               <p className="cht">{chat[1].lastMessage?.text}</p>
             </div>
           </div>

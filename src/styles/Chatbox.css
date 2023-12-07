@@ -3,6 +3,11 @@
   font-weight: 100;
 }
 
+.chat-name-dark{
+  font-size: 16px;
+  font-weight: 100;color: white;
+}
+
 
 
 .cht {
@@ -39,8 +44,7 @@
   border-top: 1px solid gainsboro;
   border: none;
   border-radius: 10px;
-  border: 2px solid #aab3e2;
-  box-shadow: 1px 1px 1px 1px;
+  box-shadow: 1px 1px 3px 3px #9babfa;
   background-color: #e7a4de;
   cursor: pointer;
 }

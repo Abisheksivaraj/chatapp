@@ -35,17 +35,17 @@
   gap: 1rem;
 }
 
-.text-box {
+.input-style {
   width: 30vw;
   height: 100%;
   border: none;
-  /* outline: none; */
+  outline: none;
   font-size: 18px;
 }
 
 .text-field{
   width: 35vw;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   display: flex;
   flex-direction: row;
   justify-content: start;
@@ -59,13 +59,13 @@
   align-items: center;
   border-radius: 15px;
   color: white;
-  background-color: #9babfa;
+  background-color: #e7a8de;
   cursor: pointer;
-  box-shadow: 1px 1px 3px 3px #e7a8de;
+  box-shadow: 1px 1px 3px 3px #9babfa;
 }
 
 .snd {
-  color: #9babfa;
+  color: #e7a8de;
   font-size: 2rem;
   margin-right: 2rem;
 }

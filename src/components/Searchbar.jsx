@@ -7,7 +7,7 @@ import {
   query,
   where,
   getDocs,
-  setDoc, // Corrected import
+  setDoc, 
   doc,
   updateDoc,
   serverTimestamp,
@@ -19,9 +19,8 @@ import { DarkModeContext } from "../context/themecontext";
 
 const Searchbar = () => {
   const [username, setUsername] = useState("");
-  const [user, setUser] = useState(null); // Corrected initial state value
-  const [err, setErr] = useState(false); // Corrected initial state value
-
+  const [user, setUser] = useState(null); 
+  const [err, setErr] = useState(false); 
   const { currentUser } = useContext(AuthContext);
 
   const [toggle, setToggle] = useState(false);
@@ -92,6 +91,7 @@ const Searchbar = () => {
         <div className="search-box">
           <input
             type="text"
+            placeholder="Search or start a new chat"
             className="search-bar"
             onKeyDown={handleKey}
             onChange={(e) => setUsername(e.target.value)}

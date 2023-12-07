@@ -107,7 +107,7 @@ const Input = () => {
         <div className="picker-container">
           <input
             className="input-style"
-            placeholder="message"
+            placeholder="Message"
             onChange={(e) => setText(e.target.value)}
             value={text}
           />
