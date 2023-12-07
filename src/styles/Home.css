@@ -10,6 +10,18 @@
   overflow: hidden;
 }
 
+.home-dark {
+  background-color: black;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
 
 
 .container {
@@ -19,5 +31,7 @@
   border-radius: 1rem;
   display: flex;
   overflow: hidden;
-  box-shadow: 15px 8px 15px 8px rgb(195, 138, 248);
+  box-shadow: 2px 1px 30px 18px #e7a4de;
 }
+
+

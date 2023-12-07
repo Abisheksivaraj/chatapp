@@ -4,7 +4,12 @@
   height: 72.5vh;
   overflow-y: scroll;
 }
-
+.messages-dark {
+  padding: 10px;
+  background-color:#141414;
+  height: 72.5vh;
+  overflow-y: scroll;
+}
 ::-webkit-scrollbar-track {
   background-color: #f3c2ec;
 }

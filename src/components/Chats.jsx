@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext , useState } from "react";
 import Message from "./Messages";
 import Input from "./Input";
 import { IoVideocam } from "react-icons/io5";
@@ -6,18 +6,27 @@ import { IoMdCall } from "react-icons/io";
 import { IoMdMore } from "react-icons/io";
 import { ChatContext } from "../context/ChatContext";
 import "../styles/Chats.css";
+import { DarkModeContext } from "../context/themecontext";
 
 const Chats = () => {
   const { data } = useContext(ChatContext);
+  const [toggle, setToggle] = useState(false);
+  const [darkMode, setDarkMode] = useContext(DarkModeContext);
+
+  const toggleHandler = () => {
+    setDarkMode(darkMode === false ? true : false);
+  };
 
   return (
-    <div className="chat">
-      <div className="info">
+    <div className={darkMode ? "chat-dark" : "chat"}>
+      <div className={darkMode ? "info-dark" : "info"}>
         <div className="chat-name">
           <div className="img-name">
-            <img src={data.user.photoURL} className="image" alt="User" />
+            <img src={data.user.photoURL} className="image" alt="user" />
           </div>
-          <span className="name">{data.user?.displayName}</span>
+          <span className="name">
+            {data.user?.displayName}
+          </span>
         </div>
         <div className="icons">
           <div className="video">

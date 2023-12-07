@@ -17,10 +17,22 @@
     color: rgb(81, 81, 114);
   }
 
+    .info-dark {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px;
+      color: rgb(234, 234, 238);
+    }
+
   .name {
     color: rgb(71, 71, 71);
     font-size: 16px;
   }
+
+     .name-dark{
+      color: white;
+     }
 
   .chat-name {
     display: flex;
@@ -59,4 +71,23 @@
   .more:hover {
     color: navy;
     cursor: pointer;
+  }
+
+  .chat-dark {
+  background-color: #141414;
+  color: white; 
+  flex: 2;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+  @media (max-width:400px){
+
+    .name{
+      display: none;
+    }
   }

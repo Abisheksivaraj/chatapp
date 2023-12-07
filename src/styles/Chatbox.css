@@ -3,6 +3,8 @@
   font-weight: 100;
 }
 
+
+
 .cht {
   font-size: 14px;
   color: gray;
@@ -42,6 +44,15 @@
   background-color: #e7a4de;
   cursor: pointer;
 }
+
+/* .chats-dark {
+  background-color: rgb(37, 36, 36);
+  color: rgb(23, 21, 21);
+  height: 64px;
+  display: flex;
+  align-items: center;
+  gap: 12rem;
+} */
 
 
 @media (max-width: 400px) {

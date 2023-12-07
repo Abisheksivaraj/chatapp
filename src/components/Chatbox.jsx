@@ -7,6 +7,7 @@ import { AuthContext } from "../context/Authcontext";
 import { Link } from "react-router-dom";
 import { ChatContext } from "../context/ChatContext";
 import "../styles/Chatbox.css";
+import { DarkModeContext } from "../context/themecontext";
 
 const Chatbox = () => {
   const [chats, setChats] = useState([]);
@@ -30,6 +31,13 @@ const Chatbox = () => {
 
   const handleSelect = (u) => {
     dispatch({ type: "CHANGE_USER", payload: u });
+  };
+
+  const [toggle, setToggle] = useState(false);
+  const [darkMode, setDarkMode] = useContext(DarkModeContext);
+
+  const toggleHandler = () => {
+    setDarkMode(darkMode === false ? true : false);
   };
 
   return (

@@ -15,6 +15,7 @@ import {
 } from "firebase/firestore";
 import { db } from "../firebase";
 import { AuthContext } from "../context/Authcontext";
+import { DarkModeContext } from "../context/themecontext";
 
 const Searchbar = () => {
   const [username, setUsername] = useState("");
@@ -22,6 +23,14 @@ const Searchbar = () => {
   const [err, setErr] = useState(false); // Corrected initial state value
 
   const { currentUser } = useContext(AuthContext);
+
+  const [toggle, setToggle] = useState(false);
+  const [darkMode, setDarkMode] = useContext(DarkModeContext);
+
+  const toggleHandler = () => {
+    setDarkMode(darkMode === false ? true : false);
+  };
+  
 
   const handleSearch = async () => {
     const q = query(
@@ -78,7 +87,7 @@ const Searchbar = () => {
   };
 
   return (
-    <div className="search">
+    <div className={darkMode ? "search-dark" : "search"}>
       <div className="box">
         <div className="search-box">
           <input

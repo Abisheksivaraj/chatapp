@@ -5,6 +5,7 @@ import "../styles/messages.css";
 import { ChatContext } from "../context/ChatContext";
 // import { onSnapshot } from "firebase/firestore";
 import Messagebox from "./Messagebox";
+import { DarkModeContext } from "../context/themecontext";
 
 const Messages = () => {
   const [messages, setMessages] = useState([]);
@@ -21,9 +22,15 @@ const Messages = () => {
   }, [data.chatId]);
 
   console.log(messages);
+  const [toggle, setToggle] = useState(false);
+  const [darkMode, setDarkMode] = useContext(DarkModeContext);
+
+  const toggleHandler = () => {
+    setDarkMode(darkMode === false ? true : false);
+  };
 
   return (
-    <div className="messages">
+    <div className={darkMode ? "messages-dark" : "messages"}>
       {messages.map((m) => (
         <Messagebox message={m} key={m.id} />
       ))}

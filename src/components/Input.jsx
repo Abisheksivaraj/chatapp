@@ -15,18 +15,18 @@ import { db, storage } from "../firebase";
 import { v4 as uuid } from "uuid";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import "../styles/Input.css";
-
 import Picker from "emoji-picker-react";
+import { DarkModeContext } from "../context/themecontext";
 
 const Input = () => {
   const [text, setText] = useState("");
   const [img, setImg] = useState(null);
-  const [inputStr, setInputStr] = useState("");
+
+
   const [showPicker, setShowPicker] = useState(false);
-  const [isEmojiMode, setIsEmojiMode] = useState(false); // Track input mode
 
   const onEmojiClick = (event, emojiObject) => {
-    setText((prevText) => prevText + emojiObject.emoji);
+    setText((prevInput) => prevInput + event.emoji);
     setShowPicker(false);
   };
 
@@ -84,8 +84,14 @@ const Input = () => {
     setImg(null);
   };
 
+  const [toggle, setToggle] = useState(false);
+  const [darkMode, setDarkMode] = useContext(DarkModeContext);
+
+  const toggleHandler = () => {
+    setDarkMode(darkMode === false ? true : false);
+  };
   return (
-    <div className="input">
+    <div className={darkMode ? "input-dark" : "input"}>
       <div className="msg">
         <span className="attach">
           <input
@@ -98,31 +104,25 @@ const Input = () => {
             <MdOutlineAttachFile />
           </label>
         </span>
-        {isEmojiMode ? (
-          <span className="emoji-input">
+        <div className="picker-container">
+          <input
+            className="input-style"
+            placeholder="message"
+            onChange={(e) => setText(e.target.value)}
+            value={text}
+          />
+          <div className="emoji-icon" />
+          <BsEmojiSmile onClick={() => setShowPicker((val) => !val)} className="emoji" />
+
+          {showPicker && (
             <Picker
               pickerStyle={{ width: "100%" }}
               onEmojiClick={onEmojiClick}
             />
-          </span>
-        ) : (
-          <input
-            type="text"
-            placeholder="Message"
-            className="text-box"
-            onChange={(e) => setText(e.target.value)}
-            value={text}
-          />
-        )}
+          )}
+        </div>
       </div>
       <div className="send">
-        <span
-          className="toggle-mode"
-          onClick={() => setIsEmojiMode((prevMode) => !prevMode)}
-        >
-          <BsEmojiSmile />
-        </span>
-
         <span className="snd" onClick={handleSend}>
           <IoSendSharp />
         </span>

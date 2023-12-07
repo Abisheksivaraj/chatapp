@@ -4,12 +4,15 @@ import App from "./App.jsx";
 import "./index.css";
 import { AuthContextProvider } from "./context/Authcontext.jsx";
 import { ChatContextProvider } from "./context/ChatContext.jsx";
+import { DarkModeProvider } from "./context/themecontext.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <AuthContextProvider>
       <ChatContextProvider>
-        <App />
+        <DarkModeProvider>
+          <App />
+        </DarkModeProvider>
       </ChatContextProvider>
     </AuthContextProvider>
   </React.StrictMode>

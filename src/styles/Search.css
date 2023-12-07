@@ -31,12 +31,6 @@
   left: 10px;
 }
 
-
-
-
-
-
-
 .user-chat:hover {
   background-color: lavender;
   cursor: pointer;
@@ -57,6 +51,21 @@
 }
 
 .box {
-  margin-top: 10px;
-  border-bottom: 2px solid rgb(251, 239, 239);
+  margin-top: 2px;
+}
+
+.search-dark {
+  background-color: #141414;
+  color: white;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  gap: 12rem;
+}
+
+
+@media (max-width:400px){
+  .search-bar{
+    display: none;
+  }
 }

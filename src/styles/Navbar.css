@@ -1,6 +1,14 @@
-
 .navbar {
   background-color: white;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  gap: 12rem;
+}
+
+.navbar-dark {
+  background-color:#141414;
+  color: white;
   height: 64px;
   display: flex;
   align-items: center;
@@ -13,43 +21,55 @@
   gap: .5rem;
   font-weight: 600;
 
-} 
-
-
-/* .log-out{
-  font-size: 1.5rem;
 }
 
-a{
-  color:#952bff;
 
-} */
 
-.user{
+
+.user {
   height: 2.5rem;
   width: 2.5rem;
   border-radius: 25px;
   margin-left: 1rem;
 }
 
-.theme{
+.theme {
   width: 1.5rem;
   height: 1.5rem;
   padding: 4px;
   font-size: 1rem;
   margin-right: 1rem;
-  background-color:whitesmoke ;
+  background-color: white;
   border: none;
   cursor: pointer;
-  /* box-shadow: 1px 1px 1px 1px; */
+  border-radius: 15px;
 }
 
-.for_dark_theme{
-  --primary-color:#9a97f3;
-  --secondary-color:#818cab;
-  --font-color:#e1e1ff;
-  --bg-color:#161625;
-  --heading-color:#818cab;
+.theme-dark {
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 4px;
+  font-size: 1rem;
+  margin-right: 1rem;
+  background-color:#141414;
+  border: none;
+  cursor: pointer;
+  border-radius: 15px;
 }
 
 
+.sun-dark{
+  color: aliceblue;
+}
+
+
+
+@media (max-width:400px) {
+  .user-name {
+    display: none;
+  }
+
+  .theme {
+    margin-left: -2rem;
+  }
+}
