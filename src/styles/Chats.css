@@ -5,13 +5,11 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
   }
 
   .info {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     padding: 10px;
     color: rgb(81, 81, 114);
   }
@@ -19,7 +17,7 @@
   .info-dark {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     padding: 10px;
     color: rgb(234, 234, 238);
   }
@@ -35,10 +33,17 @@
   }
 
   .chat-name {
+    margin-left: 1rem;
     display: flex;
     align-items: center;
-    gap: 23px;
+    gap: 11rem;
+    
   }
+
+  .return{
+    color: #000;
+
+font-size: 1.5rem;  }
   
 
   .image {

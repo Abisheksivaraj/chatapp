@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import Message from "./Messages";
 import Input from "./Input";
+import { IoArrowBack } from "react-icons/io5";
 import { IoVideocam } from "react-icons/io5";
 import { IoMdCall } from "react-icons/io";
 import { IoMdMore } from "react-icons/io";
@@ -20,6 +21,11 @@ const Chats = () => {
   return (
     <div className={darkMode ? "chat-dark" : "chat"}>
       <div className={darkMode ? "info-dark" : "info"}>
+        <div className="back">
+          <a href="#" className="back-page">
+            <IoArrowBack className="return"/>
+          </a>
+        </div>
         <div className="chat-name">
           <div className="img-name">
             <img src={data.user.photoURL} className="image" alt="user" />
@@ -27,8 +33,20 @@ const Chats = () => {
           <span className={darkMode ? "name-dark" : "name"}>
             {data.user?.displayName}
           </span>
+
+          <div className="icons">
+            <div className="video">
+              <IoVideocam />
+            </div>
+            <div className="call">
+              <IoMdCall />
+            </div>
+            <div className="more">
+              <IoMdMore />
+            </div>
+          </div>
         </div>
-        <div className="icons">
+        {/* <div className="icons">
           <div className="video">
             <IoVideocam />
           </div>
@@ -38,7 +56,7 @@ const Chats = () => {
           <div className="more">
             <IoMdMore />
           </div>
-        </div>
+        </div> */}
       </div>
       <Message />
       <Input />
