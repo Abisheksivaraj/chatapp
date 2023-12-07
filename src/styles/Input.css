@@ -1,35 +1,27 @@
 .input {
-  
-
   border-top: 1px solid gainsboro;
   height: 55px;
   margin-top: -1rem;
-
   background-color: #fff;
   padding: 10px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
 }
+
 .input-dark {
-
-
   border-top: 1px solid gainsboro;
   height: 55px;
   margin-top: -1rem;
-
   background-color:#141414;
   padding: 10px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
 
 }
-.msg {
 
+.msg {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -45,7 +37,6 @@
 
 .text-field{
   width: 35vw;
-  /* border: 1px solid black; */
   display: flex;
   flex-direction: row;
   justify-content: start;

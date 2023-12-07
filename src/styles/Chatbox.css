@@ -30,7 +30,6 @@
 
 
 .abii {
-
   height: 2.5rem;
   margin-top: .5rem;
 }
@@ -49,14 +48,7 @@
   cursor: pointer;
 }
 
-/* .chats-dark {
-  background-color: rgb(37, 36, 36);
-  color: rgb(23, 21, 21);
-  height: 64px;
-  display: flex;
-  align-items: center;
-  gap: 12rem;
-} */
+
 
 
 @media (max-width: 400px) {

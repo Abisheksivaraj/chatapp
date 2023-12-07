@@ -3,7 +3,6 @@
     height: 100%;
     background-color: white;
     position: relative;
-    /* border-bottom: 11px solid rgb(241, 238, 238); */
     display: flex;
     flex-direction: column;
     justify-content: space-between;

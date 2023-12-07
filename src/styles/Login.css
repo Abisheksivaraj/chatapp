@@ -208,7 +208,6 @@ a {
   }
 
   .slogan {
-    /* position: absolute; */
     top: 8rem;
     left: 13rem;
     display: none;
@@ -222,9 +221,6 @@ a {
     font-size: 1.5rem;
   }
 
-  /* .right-container{
-    margin-top: 2rem;
-  } */
 }
   
 

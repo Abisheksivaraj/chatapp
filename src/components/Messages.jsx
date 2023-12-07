@@ -3,7 +3,6 @@ import { db } from "../firebase";
 import React, { useContext, useEffect, useState } from "react";
 import "../styles/messages.css";
 import { ChatContext } from "../context/ChatContext";
-// import { onSnapshot } from "firebase/firestore";
 import Messagebox from "./Messagebox";
 import { DarkModeContext } from "../context/themecontext";
 
