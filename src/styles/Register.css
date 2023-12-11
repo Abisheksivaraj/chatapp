@@ -126,20 +126,20 @@ color: #aab3e2;
 
         @media(max-width:400px) {
           .registration {
+            display: flex;
             flex-direction: column;
             overflow: hidden;
             width: 100vw;
             height: 100vh;
             overflow-y: scroll;
+            justify-content: center;
+            align-items: center;
           }
     
           .conversation {
               display: none;
           }
 
-          .right{
-          margin-top: 2.7rem;
-          }
     
           .slogan {
             position: absolute;

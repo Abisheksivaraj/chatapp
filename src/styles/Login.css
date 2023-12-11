@@ -163,27 +163,33 @@ a {
 
 @media(max-width:400px) {
   .login {
+    display: flex;
     flex-direction: column;
     overflow: hidden;
     width: 100vw;
     height: 100vh;
     overflow-y: scroll;
+    justify-content: center;
+    align-items: center;
   }
-.logo{
-  margin-top: -1rem;
-  height: 10rem;
-  width: 10rem;
-  position: relative;
-  display: none;
+
+  .logo {
+    margin-top: -1rem;
+    height: 10rem;
+    width: 10rem;
+    position: relative;
+    display: none;
   }
-  .slogan{
+
+  .slogan {
     position: absolute;
     top: 8rem;
     right: 21.6rem;
     display: none;
 
   }
-  h2{
+
+  h2 {
     margin-top: 1rem;
     margin-left: 1rem;
     text-align: center;
@@ -201,7 +207,7 @@ a {
   }
 
   .logo {
-  
+
     height: 10rem;
     width: 10rem;
     position: relative;
@@ -222,7 +228,7 @@ a {
   }
 
 }
-  
+
 
 @media(max-width:1200px) {
   .login {
@@ -242,9 +248,9 @@ a {
 
   .slogan {
     position: absolute;
-      bottom: 10rem;
-      margin-left: -2rem;
-  
+    bottom: 10rem;
+    margin-left: -2rem;
+
 
   }
 
