@@ -33,3 +33,25 @@
   overflow: hidden;
   box-shadow: 2px 1px 30px 18px #e7a4de;
 }
+
+
+@media (max-width:400px) { 
+  .container {
+    width: 75%;
+  }
+
+
+}
+
+
+@media (min-width: 650px) and (max-width:800px) {
+  .container {
+    width: 40%;
+  }
+}
+
+/* @media (max-width:1200px) {
+  .sidebar {
+    width: 1000 px;
+  }
+} */

@@ -65,7 +65,11 @@
 
 
 @media (max-width:400px){
-  .search-bar{
-    display: none;
-  }
+  .search-box {
+      height: 2rem;
+      display: flex;
+      margin-left: .7rem;
+      border-radius: 8px;
+      position: relative
+    }
 }

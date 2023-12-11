@@ -37,14 +37,15 @@
     display: flex;
     align-items: center;
     gap: 11rem;
-    
+
   }
 
-  .return{
+  .return {
     color: #000;
 
-font-size: 1.5rem;  }
-  
+    font-size: 1.5rem;
+  }
+
 
   .image {
     height: 2.5rem;
@@ -97,7 +98,41 @@ font-size: 1.5rem;  }
 
   @media (max-width:400px) {
 
-    .name {
+
+    .chat {
+      flex: 2;
+      height: 100%;
+      background-color: white;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      display: none;
+
+    }
+  }
+
+  @media (max-width:800px) {
+
+    .chat {
+      flex: 2;
+      height: 100%;
+      background-color: white;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      display: none;
+
+    }
+
+    .chat-dark {
+      background-color: #141414;
+      color: white;
+      flex: 2;
+      height: 100%;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       display: none;
     }
   }

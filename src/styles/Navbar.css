@@ -65,11 +65,16 @@
 
 
 @media (max-width:400px) {
-  .user-name {
-    display: none;
-  }
 
-  .theme {
-    margin-left: -2rem;
-  }
+    .theme {
+      width: 1.5rem;
+      height: 1.5rem;
+      padding: 4px;
+      font-size: 1rem;
+      margin-right: 1rem;
+      background-color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 15px;
+    }
 }
